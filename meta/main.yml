@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  role_name: "tailoringexpert-tenant-web"
+  author: 
+    - "Michael Bädorf"
+  description: "Role for installing static web content of tenants"
+  license: "Apache-2.0"
+  min_ansible_version: "2.5"
+  repository : "https://github.com/tailoringexpert/ansible-tenant-web"
+
+  platforms:
+
+  galaxy_tags:
+
+
+dependencies: []
