@@ -1,0 +1,14 @@
+---    
+- name: Create directory layout
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ group }}"
+  with_items: "{{ web_directories }}"
+  when: item | length > 0
+   
+- include_tasks: tenant.yml
+  loop_control:
+    loop_var: tenant
+  loop: "{{ tenants }}"    

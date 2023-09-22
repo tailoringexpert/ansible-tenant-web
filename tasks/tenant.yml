@@ -1,0 +1,16 @@
+---
+- name: "{{ tenant.name | upper }} | set tenant variables" 
+  set_fact:
+    static_dest: "{{ web_static }}/{{ tenant.name | lower }}"
+
+- debug:
+    msg: " {{ item }}" 
+    verbosity: 1
+  with_items:
+    - "static destination dir: {{ static_dest }}"
+    
+- include_tasks:
+    file: asset.yml
+  loop: "{{ tenant.assets }}"  
+  loop_control:
+    loop_var: asset    

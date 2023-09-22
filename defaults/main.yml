@@ -1,0 +1,10 @@
+---
+user: tailoringexpert
+group: tailoringexpert
+
+web_home: /app
+web_static: "{{ web_home }}/static"
+
+web_directories: [ 
+  "{{ web_static }}"
+]  
